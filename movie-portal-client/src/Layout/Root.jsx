@@ -9,7 +9,7 @@ const Root = () => {
             <div className='w-full bg-primary sticky top-0 z-10'>
             <Navbar></Navbar>
             </div>
-            <div className='max-w-screen-2xl mx-auto'>
+            <div className=''>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

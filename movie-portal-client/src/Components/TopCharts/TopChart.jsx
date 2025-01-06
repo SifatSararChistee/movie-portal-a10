@@ -13,7 +13,7 @@ const TopChart = () => {
   ];
 
   return (
-    <div className={`bg-gradient-to-b  p-8 w-11/12 mx-auto rounded-2xl shadow-2xl mb-8
+    <div className={`bg-gradient-to-b  p-8 max-w-screen-2xl w-11/12 mx-auto rounded-2xl shadow-2xl mb-8
       ${
         theme === "light" ? "from-gray-100 via-gray-200 to-gray-300" : "text-black"}
     `}>

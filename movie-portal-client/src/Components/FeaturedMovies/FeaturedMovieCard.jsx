@@ -33,7 +33,7 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
       className="w-full h-[400px] rounded-xl"
     />
   </div>
-  <div className="w-full h-full absolute hidden group-hover:flex flex-col justify-center items-center text-white bg-black/70 p-4 space-y-4 font-bold transition-all duration-300">
+  <div className="w-full h-full rounded-xl absolute hidden group-hover:flex flex-col justify-center items-center text-white bg-black/70 p-4 space-y-4 font-bold transition-all duration-300">
     <h3 className="font-bold text-xl">{title}</h3>
     <div className="flex items-center gap-4">
       <p>{genre}</p>

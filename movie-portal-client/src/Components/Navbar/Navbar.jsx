@@ -68,7 +68,7 @@ const Navbar = () => {
       return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
     }}
           >
-              Favorites
+              My Favorites
             </NavLink>
           </li>
   

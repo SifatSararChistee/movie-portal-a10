@@ -7,7 +7,7 @@ const FeaturedMovies = ({ movies }) => {
 
     return (
         <div
-            className={`mt-8 mx-auto w-11/12 p-8 rounded-3xl ${
+            className={`mt-8 mx-auto max-w-screen-2xl w-11/12 p-8 rounded-3xl ${
                 theme === "light" ? "bg-gray-100" : "bg-gray-800"
             }`}
         >

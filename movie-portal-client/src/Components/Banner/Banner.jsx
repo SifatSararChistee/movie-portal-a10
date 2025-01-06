@@ -14,7 +14,7 @@ import bannerImg5 from "../../assets/banner5.jpg";
 
 const Banner = () => {
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="h-[500px] max-w-screen-2xl mx-auto">
             <Swiper
                 navigation={true}
                 autoplay={{ delay: 1500, disableOnInteraction: false }}
@@ -27,35 +27,35 @@ const Banner = () => {
                     <img 
                         src={bannerImg1} 
                         alt="Banner 1" 
-                        className="w-full max-h-[600px] object-cover rounded-lg" 
+                        className="w-full h-[500px] object-cover" 
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img 
                         src={bannerImg2} 
                         alt="Banner 2" 
-                        className="w-full max-h-[600px] object-cover rounded-lg" 
+                        className="w-full h-[500px] object-cover" 
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img 
                         src={bannerImg3} 
                         alt="Banner 3" 
-                        className="w-full max-h-[600px] object-cover rounded-lg" 
+                        className="w-full h-[500px] object-cover" 
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img 
                         src={bannerImg4} 
                         alt="Banner 4" 
-                        className="w-full max-h-[600px] object-cover rounded-lg" 
+                        className="w-full h-[500px] object-cover" 
                     />
                 </SwiperSlide>
                 <SwiperSlide>
                     <img 
                         src={bannerImg5} 
                         alt="Banner 5" 
-                        className="w-full max-h-[600px] object-cover rounded-lg" 
+                        className="w-full h-[500px] object-cover" 
                     />
                 </SwiperSlide>
             </Swiper>

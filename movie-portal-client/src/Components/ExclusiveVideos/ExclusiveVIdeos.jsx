@@ -68,7 +68,7 @@ const ExclusiveVideos = () => {
   ];
 
   return (
-    <div className={`p-8 mx-auto w-11/12 my-8 rounded-2xl
+    <div className={`p-8 mx-auto max-w-screen-2xl w-11/12 my-8 rounded-2xl
       ${
         theme === "light" ? "bg-gray-100" : "bg-gray-800"}
     `}>

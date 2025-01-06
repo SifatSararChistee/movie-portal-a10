@@ -7,9 +7,9 @@ const FavoritesPage = () => {
   const [movies, setMovies] = useState(favoriteMovies);
 
   return (
-    <div>
+    <div className='mb-10'>
       <h1 className="text-4xl font-bold text-center my-8">
-        Favorite Movies
+        My Favorite Movies
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto w-11/12">
         {movies.length > 0 ? (
