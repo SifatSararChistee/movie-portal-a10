@@ -25,19 +25,21 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
   };
 
   return (
-    <div className="card bg-base-100 shadow-lg w-11/12 h-[600px]">
-      <figure>
+    <div className="card w-11/12">
+      <div className="h-1/2">
         <img
           src={poster}
           alt={`${title} Poster`}
-          className="w-full h-auto object-cover"
+          className="w-full h-[400px] rounded-xl"
         />
-      </figure>
-      <div className="card-body">
-        <h3 className="card-title text-2xl font-bold">{title}</h3>
-        <p className="italic text-gray-500">Genre: {genre}</p>
-        <p className="text-sm text-gray-600">Runtime: {duration} min</p>
-        <p className="text-sm text-gray-600">Released In: {releaseYear}</p>
+      </div>
+      <div className="w-full absolute top-56 text-white hover:bg-white hover:text-black flex items-center flex-col p-4 rounded-t-3xl space-y-2 font-bold">
+        <h3 className="font-bold text-xl">{title}</h3>
+        <div className="flex items-center gap-2">
+        <p className="">{genre}</p>||
+        <p className="text-sm "> {duration} min</p>||
+        <p className="text-sm ">{releaseYear}</p>
+        </div>
         <p className="flex items-center gap-1 text-yellow-500">
           Rating: ⭐ {rating}/5
         </p>

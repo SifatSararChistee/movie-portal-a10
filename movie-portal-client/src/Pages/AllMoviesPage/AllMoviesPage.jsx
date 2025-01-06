@@ -13,7 +13,7 @@ const AllMoviesPage = () => {
     },[searchTerm])
 
     return (
-        <div>
+        <div className='mb-10'>
             <h1 className='text-4xl font-bold text-center my-8'>
                 All Movies
             </h1>
@@ -27,7 +27,7 @@ const AllMoviesPage = () => {
       />
 
     </form>
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 mx-auto w-11/12 place-items-center">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-auto w-11/12 place-items-center">
                 {
                     moviesData.map(movie=> <FeaturedMovieCard key={movie._id} movie={movie}></FeaturedMovieCard>)
                 }
