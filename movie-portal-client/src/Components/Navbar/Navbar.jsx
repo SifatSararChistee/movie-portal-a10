@@ -42,7 +42,10 @@ const Navbar = () => {
               All Movies
             </NavLink>
           </li>
-          <li className="text-lg flex items-center gap-2 mr-3 text-white">
+
+{
+  user && user.email ? <>
+            <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/add-movie"} 
     className={({ isActive }) => {
       const baseClasses = "flex items-center gap-2 transition-all";
@@ -68,6 +71,10 @@ const Navbar = () => {
               Favorites
             </NavLink>
           </li>
+  
+  </>:""
+}
+
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/best-of-2024"} 
     className={({ isActive }) => {
@@ -85,7 +92,7 @@ const Navbar = () => {
       );
     
     return (
-<div className="navbar px-5 py-3 max-w-screen-2xl mx-auto">
+<div className="navbar px-5 py-3 max-w-screen-2xl mx-auto w-11/12">
       <div className="navbar-start">
         <div className="dropdown z-30">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

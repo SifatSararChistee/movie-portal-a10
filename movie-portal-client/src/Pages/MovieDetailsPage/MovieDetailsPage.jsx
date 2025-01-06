@@ -62,13 +62,13 @@ const MovieDetailsPage = () => {
   
             <div className="flex gap-4 mt-4">
               <Link>
-                <button disabled={isDisabled} onClick={()=>handleFavoriteBtn()} className="btn btn-primary w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-blue-600 transition duration-300">Add to Favorites</button>
+                <button disabled={isDisabled} onClick={()=>handleFavoriteBtn()} className="btn btn-primary w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-blue-500 transition duration-300">Add to Favorites</button>
               </Link>
               <Link to={`/update/${_id}`}>
-                <button className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-blue-600 transition duration-300">Update Movie</button>
+                <button className="btn-primary btn w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-blue-500 transition duration-300">Update Movie</button>
               </Link>
 
-                <button onClick={()=>handleDeleteBtn(_id)} className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-600 transition duration-300">Delete</button>
+                <button onClick={()=>handleDeleteBtn(_id)} className="btn bg-red-500 w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-300 transition duration-300">Delete</button>
             </div>
           </div>
         </div>
