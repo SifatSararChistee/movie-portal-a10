@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Loading from '../Loading/Loading';
-import { CgProfile } from 'react-icons/cg';
 import { ThemeContext } from '../../Provider/ThemeProvider';
 
 const Navbar = () => {
@@ -16,88 +15,75 @@ const Navbar = () => {
 
     const links = (
         <>
-          <li className="text-lg flex items-center gap-2 mr-3">
-            <NavLink to={"/"}  className={({ isActive }) =>
-          `flex items-center gap-2 ${
-            isActive
-              ? theme === "light"
-                ? "text-blue-600 font-bold"
-                : "text-yellow-400 font-bold"
-              : theme === "light"
-              ? "text-gray-800"
-              : "text-gray-400"
-          }`
-        }>
-            Home
-            </NavLink>
-          </li>
-          <li className="text-lg flex items-center gap-2 mr-3">
-            <NavLink to={"/movies"}  className={({ isActive }) =>
-          `flex items-center gap-2 ${
-            isActive
-              ? theme === "light"
-                ? "text-blue-600 font-bold"
-                : "text-yellow-400 font-bold"
-              : theme === "light"
-              ? "text-gray-800"
-              : "text-gray-400"
-          }`
-        }>
+<li className="text-lg flex items-center gap-2 mr-3 text-white">
+  <NavLink
+    to="/"
+    className={({ isActive }) => {
+      const baseClasses = "flex items-center gap-2 transition-all duration-200";
+      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
+      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+  
+      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    }}
+  >
+    Home
+  </NavLink>
+</li>
+          <li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/movies"}  
+    className={({ isActive }) => {
+      const baseClasses = "flex items-center gap-2 transition-all duration-200";
+      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
+      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+  
+      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    }}
+          >
               All Movies
             </NavLink>
           </li>
-          <li className="text-lg flex items-center gap-2 mr-3">
-            <NavLink to={"/add-movie"} className={({ isActive }) =>
-          `flex items-center gap-2 ${
-            isActive
-              ? theme === "light"
-                ? "text-blue-600 font-bold"
-                : "text-yellow-400 font-bold"
-              : theme === "light"
-              ? "text-gray-800"
-              : "text-gray-400"
-          }`
-        }>
+          <li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/add-movie"} 
+    className={({ isActive }) => {
+      const baseClasses = "flex items-center gap-2 transition-all";
+      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+  
+      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    }}
+          >
               Add Movie
             </NavLink>
           </li>
-          <li className="text-lg flex items-center gap-2 mr-3">
-            <NavLink to={"/favorites"}className={({ isActive }) =>
-          `flex items-center gap-2 ${
-            isActive
-              ? theme === "light"
-                ? "text-blue-600 font-bold"
-                : "text-yellow-400 font-bold"
-              : theme === "light"
-              ? "text-gray-800"
-              : "text-gray-400"
-          }`
-        }>
+          <li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/favorites"}
+    className={({ isActive }) => {
+      const baseClasses = "flex items-center gap-2 transition-all";
+      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+  
+      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    }}
+          >
               Favorites
             </NavLink>
           </li>
-          <li className="text-lg flex items-center gap-2 mr-3">
-            <NavLink to={"/best-of-2024"} className={({ isActive }) =>
-          `flex items-center gap-2 ${
-            isActive
-              ? theme === "light"
-                ? "text-blue-600 font-bold"
-                : "text-yellow-400 font-bold"
-              : theme === "light"
-              ? "text-gray-800"
-              : "text-gray-400"
-          }`
-        }>
+          <li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/best-of-2024"} 
+    className={({ isActive }) => {
+      const baseClasses = "flex items-center gap-2 transition-all";
+      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+  
+      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    }}
+          >
             Best of 2024
             </NavLink>
           </li>
         </>
       );
     
-
-
-
-
     return (
 <div className="navbar px-5 py-3 max-w-screen-2xl mx-auto">
       <div className="navbar-start">
@@ -124,9 +110,7 @@ const Navbar = () => {
         </div>
         <Link to={"/"}>
               <button
-        className={`btn btn-ghost lg:text-2xl font-bold ${
-          theme === "light" ? "text-black" : "text-white"
-        }`}
+        className={`btn btn-ghost lg:text-2xl font-bold text-white`}
       >
         🎬 Movie Portal
       </button>
@@ -148,8 +132,9 @@ const Navbar = () => {
       {user && user?.email ? (
         <div className="mr-3 relative group">
           <img
-            className="w-12 h-12 border-black border-2 rounded-full group-hover:opacity-75 transition-opacity duration-200"
+            className="w-12 h-12 rounded-full group-hover:opacity-75 transition-opacity duration-200"
             src={user.photoURL}
+            referrerPolicy="no-referrer"
             alt=""
           />
           <span
@@ -158,11 +143,7 @@ const Navbar = () => {
             {user.displayName}
           </span>
         </div>
-      ) : (
-        <div className="text-5xl mr-3 text-black">
-          <CgProfile />
-        </div>
-      )}
+      ) : ''}
       {user && user?.email ? (
         <button
           onClick={handleLogOut}
