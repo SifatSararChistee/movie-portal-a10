@@ -38,10 +38,7 @@ const router = createBrowserRouter([
         },
         {
             path:"/movie-details/:id",
-            element: 
-            <PrivateRoute>
-                <MovieDetailsPage></MovieDetailsPage>
-            </PrivateRoute>,
+            element: <MovieDetailsPage></MovieDetailsPage>,
             loader: ({params})=> fetch(`https://movie-portal-server-ecru.vercel.app/movie-details/${params.id}`)
         },
         {

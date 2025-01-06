@@ -51,7 +51,7 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
         <button
           onClick={() => handleDeleteBtn(_id)}
           aria-label="Delete from Favorites"
-          className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-600 transition duration-300"
+          className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-600 hover:text-white transition duration-300"
         >
           Delete from Favorites
         </button>

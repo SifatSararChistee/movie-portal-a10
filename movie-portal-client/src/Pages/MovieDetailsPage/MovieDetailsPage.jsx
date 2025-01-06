@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLoaderData, useNavigate } from 'react-router';
 import toast from 'react-hot-toast';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const MovieDetailsPage = () => {
   const [isDisabled, setIsDisabled] = useState(false);
+    const{user}=useContext(AuthContext)
     const movie = useLoaderData()
     const navigate=useNavigate()
     const {title, poster, _id, genre, duration, releaseYear, rating , summary, email}= movie
 
     const handleDeleteBtn=(_id)=>{
+      if(!user){
+        return navigate('/login')
+      }
       fetch(`https://movie-portal-server-ecru.vercel.app/movies/${_id}`,{
         method:'DELETE',
       })
@@ -23,6 +28,9 @@ const MovieDetailsPage = () => {
       })
     }
     const handleFavoriteBtn=()=>{
+      if(!user){
+        return navigate('/login')
+      }
       fetch("https://movie-portal-server-ecru.vercel.app/favorites",{
         method:'POST',
         headers: {

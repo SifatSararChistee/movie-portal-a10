@@ -24,7 +24,7 @@ const VideoCard = ({ videoUrl, title, description }) => {
         <p className="text-sm text-gray-600">{description}</p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">
-            <a href={videoUrl} target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+            <a href={videoUrl} target="_blank" rel="noopener noreferrer">More Details</a>
           </button>
         </div>
       </div>

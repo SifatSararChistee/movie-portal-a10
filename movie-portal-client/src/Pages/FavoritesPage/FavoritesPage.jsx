@@ -7,7 +7,7 @@ const FavoritesPage = () => {
   const [movies, setMovies] = useState(favoriteMovies);
 
   return (
-    <div className='mb-10'>
+    <div className='mb-10 max-w-screen-2xl mx-auto'>
       <h1 className="text-4xl font-bold text-center my-8">
         My Favorite Movies
       </h1>
