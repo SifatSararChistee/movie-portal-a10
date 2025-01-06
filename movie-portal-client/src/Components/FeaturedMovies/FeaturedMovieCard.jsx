@@ -44,9 +44,9 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
       Rating: ⭐ {rating}/5
     </p>
     <div className="card-actions justify-end flex gap-4">
-      <Link to={`/movie-details/${_id}`}>
-        <button className="btn btn-primary">See Details</button>
-      </Link>
+    {location.pathname === "/favorites"? '' :    <Link to={`/movie-details/${_id}`}>
+        <button className="btn btn-primary hover:bg-blue-300 hover:text-black hover:font-bold">See Details</button>
+      </Link> }
       {location.pathname === "/favorites" && (
         <button
           onClick={() => handleDeleteBtn(_id)}
