@@ -4,6 +4,7 @@ import { AuthContext } from '../../Provider/AuthProvider';
 import Loading from '../Loading/Loading';
 import { ThemeContext } from '../../Provider/ThemeProvider';
 
+
 const Navbar = () => {
   const { user, logOut, setUser, loading} = useContext(AuthContext);
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -18,26 +19,20 @@ const Navbar = () => {
 <li className="text-lg flex items-center gap-2 mr-3 text-white">
   <NavLink
     to="/"
-    className={({ isActive }) => {
-      const baseClasses = "flex items-center gap-2 transition-all duration-200";
-      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
-      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
-  
-      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    }}
   >
     Home
   </NavLink>
 </li>
+
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/movies"}  
-    className={({ isActive }) => {
-      const baseClasses = "flex items-center gap-2 transition-all duration-200";
-      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
-      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+    // className={({ isActive }) => {
+    //   const baseClasses = "transition-all duration-200";
+    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
+    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
   
-      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    }}
+    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    // }}
           >
               All Movies
             </NavLink>
@@ -47,26 +42,26 @@ const Navbar = () => {
   user && user.email ? <>
             <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/add-movie"} 
-    className={({ isActive }) => {
-      const baseClasses = "flex items-center gap-2 transition-all";
-      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+    // className={({ isActive }) => {
+    //   const baseClasses = "transition-all duration-200";
+    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
   
-      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    }}
+    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    // }}
           >
               Add Movie
             </NavLink>
           </li>
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/favorites"}
-    className={({ isActive }) => {
-      const baseClasses = "flex items-center gap-2 transition-all";
-      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+    // className={({ isActive }) => {
+    //   const baseClasses = "transition-all duration-200";
+    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
   
-      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    }}
+    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    // }}
           >
               My Favorites
             </NavLink>
@@ -77,13 +72,13 @@ const Navbar = () => {
 
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/best-of-2024"} 
-    className={({ isActive }) => {
-      const baseClasses = "flex items-center gap-2 transition-all";
-      const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-      const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
+    // className={({ isActive }) => {
+    //   const baseClasses = "transition-all duration-200";
+    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
+    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
   
-      return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    }}
+    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
+    // }}
           >
             Best of 2024
             </NavLink>
