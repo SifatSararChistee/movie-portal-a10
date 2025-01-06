@@ -25,39 +25,41 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
   };
 
   return (
-    <div className="card w-11/12">
-      <div className="h-1/2">
-        <img
-          src={poster}
-          alt={`${title} Poster`}
-          className="w-full h-[400px] rounded-xl"
-        />
-      </div>
-      <div className="w-full absolute top-56 text-white hover:bg-white hover:text-black flex items-center flex-col p-4 rounded-t-3xl space-y-2 font-bold">
-        <h3 className="font-bold text-xl">{title}</h3>
-        <div className="flex items-center gap-2">
-        <p className="">{genre}</p>||
-        <p className="text-sm "> {duration} min</p>||
-        <p className="text-sm ">{releaseYear}</p>
-        </div>
-        <p className="flex items-center gap-1 text-yellow-500">
-          Rating: ⭐ {rating}/5
-        </p>
-        <div className="card-actions justify-end">
-          <Link to={`/movie-details/${_id}`}>
-            <button className="btn btn-primary">See Details</button>
-          </Link>
-          {location.pathname === "/favorites" && (
-            <button
-              onClick={() => handleDeleteBtn(_id)}
-              className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-600 transition duration-300"
-            >
-              Delete from Favorites
-            </button>
-          )}
-        </div>
-      </div>
+<div className="card w-11/12 relative group">
+  <div className="h-1/2">
+    <img
+      src={poster}
+      alt={`${title} Poster`}
+      className="w-full h-[400px] rounded-xl"
+    />
+  </div>
+  <div className="w-full h-full absolute hidden group-hover:flex flex-col justify-center items-center text-white bg-black/70 p-4 space-y-4 font-bold transition-all duration-300">
+    <h3 className="font-bold text-xl">{title}</h3>
+    <div className="flex items-center gap-4">
+      <p>{genre}</p>
+      <p>| {duration} min</p>
+      <p>| {releaseYear}</p>
     </div>
+    <p className="flex items-center gap-1 text-yellow-500">
+      Rating: ⭐ {rating}/5
+    </p>
+    <div className="card-actions justify-end flex gap-4">
+      <Link to={`/movie-details/${_id}`}>
+        <button className="btn btn-primary">See Details</button>
+      </Link>
+      {location.pathname === "/favorites" && (
+        <button
+          onClick={() => handleDeleteBtn(_id)}
+          aria-label="Delete from Favorites"
+          className="btn btn-danger w-full sm:w-auto py-2 px-4 text-lg font-semibold rounded-lg hover:bg-red-600 transition duration-300"
+        >
+          Delete from Favorites
+        </button>
+      )}
+    </div>
+  </div>
+</div>
+
   );
 };
 
