@@ -16,8 +16,8 @@ const Home = () => {
                     <FeaturedMovies movies={movies}></FeaturedMovies>
                     <ExclusiveVideos></ExclusiveVideos>
                     <TopChart></TopChart>
-                    <Stats></Stats>
                     <Newsletter></Newsletter>
+                    <Stats></Stats>
         </div>
     );
 };
