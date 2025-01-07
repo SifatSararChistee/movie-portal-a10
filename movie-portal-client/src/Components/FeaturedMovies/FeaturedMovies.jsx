@@ -27,7 +27,7 @@ const FeaturedMovies = ({ movies }) => {
                 }`}>
                 Top rated movies just for you
             </h5>
-            <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 place-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
                 {movies.map((movie) => (
                     <FeaturedMovieCard key={movie._id} movie={movie} />
                 ))}
