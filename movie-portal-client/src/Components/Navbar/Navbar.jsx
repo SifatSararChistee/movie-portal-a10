@@ -18,72 +18,28 @@ const Navbar = () => {
         <>
 <li className="text-lg flex items-center gap-2 mr-3 text-white">
   <NavLink
-    to="/"
-  >
-    Home
-  </NavLink>
+    to="/">Home</NavLink>
 </li>
 
-          <li className="text-lg flex items-center gap-2 mr-3 text-white">
-            <NavLink to={"/movies"}  
-    // className={({ isActive }) => {
-    //   const baseClasses = "transition-all duration-200";
-    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-700";
-    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
-  
-    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    // }}
-          >
-              All Movies
-            </NavLink>
+<li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/movies"}>All Movies</NavLink>
           </li>
 
 {
   user && user.email ? <>
             <li className="text-lg flex items-center gap-2 mr-3 text-white">
-            <NavLink to={"/add-movie"} 
-    // className={({ isActive }) => {
-    //   const baseClasses = "transition-all duration-200";
-    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
-  
-    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    // }}
-          >
-              Add Movie
-            </NavLink>
+            <NavLink to={"/add-movie"} >Add Movie</NavLink>
           </li>
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
-            <NavLink to={"/favorites"}
-    // className={({ isActive }) => {
-    //   const baseClasses = "transition-all duration-200";
-    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
-  
-    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    // }}
-          >
+            <NavLink to={"/favorites"}>
               My Favorites
             </NavLink>
           </li>
-  
   </>:""
 }
-
-          <li className="text-lg flex items-center gap-2 mr-3 text-white">
-            <NavLink to={"/best-of-2024"} 
-    // className={({ isActive }) => {
-    //   const baseClasses = "transition-all duration-200";
-    //   const activeClasses = "bg-teal-700 text-white px-4 py-2 rounded";
-    //   const inactiveClasses = "text-white hover:bg-slate-200 hover:text-black";
-  
-    //   return `${baseClasses} ${isActive ? activeClasses : inactiveClasses}`;
-    // }}
-          >
-            Best of 2024
-            </NavLink>
-          </li>
-        </>
+<li className="text-lg flex items-center gap-2 mr-3 text-white">
+    <NavLink to={"/best-of-2024"} >Best of 2024</NavLink>
+          </li></>
       );
     
     return (

@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { NavLink } from 'react-router';
 
 const Footer = () => {
+  const {user}=useContext(AuthContext)
     return (
 <footer className="footer footer-center bg-primary text-white p-10">
   <aside className='space-y-5'>
@@ -11,6 +14,32 @@ const Footer = () => {
       <span className='text-lg'>Providing reliable Movies Information since 1992</span>
     </p>
   </aside>
+  <div className='flex'>
+  <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+  <NavLink
+    to="/">Home</NavLink>
+</li>
+
+<li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+            <NavLink to={"/movies"}>All Movies</NavLink>
+          </li>
+
+{
+  user && user.email ? <>
+            <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+            <NavLink to={"/add-movie"} >Add Movie</NavLink>
+          </li>
+          <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+            <NavLink to={"/favorites"}>
+              My Favorites
+            </NavLink>
+          </li>
+  </>:""
+}
+<li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+    <NavLink to={"/best-of-2024"} >Best of 2024</NavLink>
+          </li>
+  </div>
   <nav>
       <div className='text-lg'>
       <span className='font-bold'>Head Office:</span> 28 Park Ave,Time Square, USA 16780
