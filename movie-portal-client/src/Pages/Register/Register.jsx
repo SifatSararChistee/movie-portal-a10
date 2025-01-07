@@ -4,6 +4,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 import toast from 'react-hot-toast';
 import { getAuth } from 'firebase/auth';
+import registerAnimation from "../../assets/register.json";
+import Lottie from "lottie-react";
 
 
 const Register = () => {
@@ -77,9 +79,9 @@ const Register = () => {
     });
   }
     return (
-        <div>
+        <div className="flex max-w-screen-2xl mx-auto items-center justify-center my-10 lg:w-1/2 md:w-1/2 gap-5">
           <div className="flex flex-col justify-center items-center mt-4 w-[400px] mx-auto shadow-2xl rounded-xl">
-            <h1 className='text-3xl font-bold mt-2'>Register Your Account</h1>
+            <h1 className='text-xl lg:text-3xl md:text-2xl font-bold mt-2'>Register Your Account</h1>
             <form onSubmit={handleRegister} className="p-10 w-full">
             <div className="form-control">
           <label className="label">
@@ -117,6 +119,11 @@ const Register = () => {
       <p>Already have an account?</p>
       <p className="mb-5 text-lg font-medium underline"><Link to={'/login'}> LogIn Here </Link></p>
         </div>
+
+        <div className='max-h-fit hidden lg:block md:block'>
+          <Lottie className='h-[400px]' animationData={registerAnimation}></Lottie>
+        </div>
+
         </div>
 
     );

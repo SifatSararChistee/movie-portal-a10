@@ -5,11 +5,11 @@ import Footer from '../Components/Footer/Footer';
 
 const Root = () => {
     return (
-        <div>
+        <div className='flex flex-col min-h-screen'>
             <div className='w-full bg-primary sticky top-0 z-10'>
             <Navbar></Navbar>
             </div>
-            <div className=''>
+            <div className='flex-grow'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

@@ -3,6 +3,8 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useContext, useState } from "react";
 import toast from 'react-hot-toast';
+import loginAnimation from "../../assets/login.json";
+import Lottie from "lottie-react";
 
 
 const Login = () => {
@@ -45,9 +47,9 @@ const Login = () => {
     }
 
     return (
-<div>
+<div className="flex max-w-screen-2xl lg:w-1/2 md:w-1/2 mx-auto items-center justify-center my-10">
         <div className="flex flex-col justify-center items-center mt-4 w-[400px] mx-auto shadow-2xl rounded-xl">
-        <h1 className="text-3xl font-bold mt-3">Log in to Your Account</h1>
+        <h1 className="text-xl lg:text-3xl font-bold mt-3">Log in to Your Account</h1>
         <form className="p-10 w-full" onSubmit={handleLogIn}>
         <div className="form-control">
           <label className="label">
@@ -77,6 +79,12 @@ const Login = () => {
       <p>Don't have account?</p>
       <p className="mb-5 text-lg font-medium underline"><Link to={'/register'}> Register Here </Link></p>
         </div>
+        
+        <div>
+      <Lottie className="h-auto hidden lg:block md:block" animationData={loginAnimation}  />
+      </div>
+
+
       </div>
     );
 };
