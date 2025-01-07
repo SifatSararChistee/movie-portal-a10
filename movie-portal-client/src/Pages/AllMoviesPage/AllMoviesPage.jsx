@@ -10,7 +10,7 @@ const AllMoviesPage = () => {
 
 
     useEffect(() => {
-        let url = `https://movie-portal-server-ecru.vercel.app/movies`;
+        let url = `https://movie-portal-server-ecru.vercel.app`;
     
         if (searchTerm) {
             url += `?searchParams=${searchTerm}`;

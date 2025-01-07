@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import FavoritesPage from "../Pages/FavoritesPage/FavoritesPage";
 import BestMovies2024 from "../Pages/BestOf2024/BestMovies2024";
 import UpdatePage from "../Pages/UpdatePage/UpdatePage";
+import MyMovies from "../Pages/MyMovies/Mymovies";
 
 
 
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
         {
             path:"/",
             element: <Home></Home>,
-            loader: ()=> fetch("https://movie-portal-server-ecru.vercel.app/movies/highest-rated")
+            loader: ()=> fetch("https://movie-portal-server-ecru.vercel.app/highest-rated")
         },
         {
             path:"/movies",
@@ -35,6 +36,12 @@ const router = createBrowserRouter([
             element:<PrivateRoute>
                         <AddMoviePage></AddMoviePage>
                     </PrivateRoute>
+        },
+        {
+            path:"/my-movies",
+            element:<PrivateRoute>
+                        <MyMovies></MyMovies>
+                    </PrivateRoute>,
         },
         {
             path:"/movie-details/:id",

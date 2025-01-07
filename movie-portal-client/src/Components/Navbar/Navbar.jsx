@@ -30,6 +30,9 @@ const Navbar = () => {
             <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/add-movie"} >Add Movie</NavLink>
           </li>
+            <li className="text-lg flex items-center gap-2 mr-3 text-white">
+            <NavLink to={"/my-movies"} >My Movies</NavLink>
+          </li>
           <li className="text-lg flex items-center gap-2 mr-3 text-white">
             <NavLink to={"/favorites"}>
               My Favorites
@@ -45,7 +48,7 @@ const Navbar = () => {
     return (
 <div className="navbar px-5 py-3 max-w-screen-2xl mx-auto w-11/12">
       <div className="navbar-start">
-        <div className="dropdown z-30">
+        <div className="dropdown z-30 text-white">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +65,7 @@ const Navbar = () => {
               />
             </svg>
           </div>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
+          <ul tabIndex={0} className="menu menu-sm dropdown-content bg-primary rounded-box z-[1] mt-3 w-52 p-2 shadow-xl">
             {links}
           </ul>
         </div>

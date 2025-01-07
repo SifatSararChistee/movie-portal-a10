@@ -11,7 +11,7 @@ const FavoritesPage = () => {
       <h1 className="text-4xl font-bold text-center my-8">
         My Favorite Movies
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mx-auto w-11/12">
+      <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-6 mx-auto w-11/12">
         {movies.length > 0 ? (
           movies.map((movie) => (
             <FeaturedMovieCard

@@ -29,6 +29,9 @@ const Footer = () => {
             <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
             <NavLink to={"/add-movie"} >Add Movie</NavLink>
           </li>
+            <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
+            <NavLink to={"/my-movies"} >My Movies</NavLink>
+          </li>
           <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
             <NavLink to={"/favorites"}>
               My Favorites

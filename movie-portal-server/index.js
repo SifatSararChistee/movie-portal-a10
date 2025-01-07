@@ -24,22 +24,30 @@ async function run() {
     const movieCollection = client.db("movieDB").collection("movie");
     const favoriteCollection = client.db("favoriteDB").collection("favMovie");
 
+    //get movies by email
+    app.get("/movies/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const result = await movieCollection.find(query).toArray();
+      res.send(result);
+    });
+
     //lowest rated movies
-    app.get("/movies/lowest", async (req, res) => {
+    app.get("/lowest", async (req, res) => {
       const cursor = movieCollection.find({}).sort({ rating: 1 });
       const result = await cursor.toArray();
       res.send(result);
     });
 
     //highest rated movies
-    app.get("/movies/highest", async (req, res) => {
+    app.get("/highest", async (req, res) => {
       const cursor = movieCollection.find({}).sort({ rating: -1 });
       const result = await cursor.toArray();
       res.send(result);
     });
 
     //top 8 highest rated movies
-    app.get("/movies/highest-rated", async (req, res) => {
+    app.get("/highest-rated", async (req, res) => {
       const cursor = movieCollection.find({}).sort({ rating: -1 }).limit(8);
       const result = await cursor.toArray();
       res.send(result);
