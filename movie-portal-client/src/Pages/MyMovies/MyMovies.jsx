@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
 import MyMoviesTable from '../../Components/MyMoviesTable.jsx/MyMoviesTable';
+import { NavLink } from 'react-router';
 
 const MyMovies = () => {
     const {user}=useContext(AuthContext)
@@ -24,7 +25,8 @@ const MyMovies = () => {
               />
             ))
           ) : (
-            <p className="text-center text-lg">No favorite movies found.</p>
+            <p className="text-center text-lg">No movies found. You have not added any movies
+            </p>
           )}
         </div>
       </div>
