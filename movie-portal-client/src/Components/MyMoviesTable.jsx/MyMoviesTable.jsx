@@ -3,7 +3,7 @@ import React from 'react';
 const MyMoviesTable = ({movie}) => {
     const { title, poster, _id, genre, duration, releaseYear, rating } = movie;
     return (
-<div className="overflow-x-auto bg-white rounded-xl shadow-md w-1/2 mx-auto my-6">
+<div className="overflow-x-auto bg-white rounded-xl shadow-md my-6">
   <table className="table table-zebra bg-white w-full text-sm">
     <thead className="bg-gray-100 text-gray-700">
       <tr>
