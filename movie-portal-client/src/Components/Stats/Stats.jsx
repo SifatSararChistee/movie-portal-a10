@@ -1,11 +1,10 @@
 import React from 'react';
 import CountUp from 'react-countup';
-import { motion } from 'framer-motion';
 
 const Stats = () => {
     return (
-        <div className='w-11/12 mx-auto my-16 shadow-2xl rounded-xl'>
-            <div className="stats shadow w-full">
+        <div className='w-11/12 mx-auto my-16 shadow-2xl rounded-xl max-w-screen-2xl'>
+            <div className="stats shadow w-full flex flex-col lg:flex-row md:flex-row">
   <div className="stat">
     <div className="stat-figure text-primary">
       <svg
