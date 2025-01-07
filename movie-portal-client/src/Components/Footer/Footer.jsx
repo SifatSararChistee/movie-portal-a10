@@ -14,7 +14,7 @@ const Footer = () => {
       <span className='text-lg'>Providing reliable Movies Information since 1992</span>
     </p>
   </aside>
-  <div className='flex'>
+  <div className='flex flex-col lg:flex-row md:flex-row'>
   <li className="text-lg flex items-center gap-2 mr-3 text-white link link-hover">
   <NavLink
     to="/">Home</NavLink>

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Lottie from "lottie-react";
+import error from "../../assets/Animation - 1735050973708.json";
 
 const ErrorPage = () => {
     return (
-        <div className='flex flex-col items-center justify-center'>
-            <p className='text-7xl text-red-500'>Page Not Found</p>
-            <p className='text-3xl text-red-500 mt-8'>Error 404</p>
-            <Link to={'/'}><button className='text-xl btn mt-10'>Go Back to Home </button></Link>
+        <div>
+            <h1 className='text-center text-3xl font-bold text-red-400'>404 NOT Found</h1>
+            <Lottie className='h-screen' animationData={error}  />
         </div>
     );
 };

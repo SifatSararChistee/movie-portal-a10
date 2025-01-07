@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useLocation } from "react-router";
 import toast from "react-hot-toast";
+import { motion } from 'framer-motion';
 
 const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
   const { title, poster, _id, genre, duration, releaseYear, rating } = movie;
@@ -25,7 +26,12 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
   };
 
   return (
-<div className="card w-11/12 relative group">
+<motion.div className="card w-11/12 relative group hover:shadow-xl transition-shadow duration-300"
+              whileHover={{ scale: 1.07 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0 }}
+>
   <div className="h-1/2">
     <img
       src={poster}
@@ -58,7 +64,7 @@ const FeaturedMovieCard = ({ movie, setMovies, movies }) => {
       )}
     </div>
   </div>
-</div>
+</motion.div>
 
   );
 };

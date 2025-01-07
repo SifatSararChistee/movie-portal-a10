@@ -1,12 +1,18 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../Provider/ThemeProvider';
+import { motion } from 'framer-motion';
 
 const VideoCard = ({ videoUrl, title, description }) => {
   // Extracting the video ID from the video URL for the iframe embed
   const videoId = videoUrl.split('v=')[1].split('&')[0]; 
 
   return (
-    <div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300">
+    <motion.div className="card bg-base-100 shadow-lg hover:shadow-xl transition-shadow duration-300"
+    whileHover={{ scale: 1.07 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0 }}
+    >
       <div className="w-full h-[315px]">
         <iframe 
           width="100%" 
@@ -28,7 +34,7 @@ const VideoCard = ({ videoUrl, title, description }) => {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
