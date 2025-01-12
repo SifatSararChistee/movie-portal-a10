@@ -73,7 +73,7 @@ const Navbar = () => {
               <button
         className={`btn btn-ghost lg:text-2xl font-bold text-white`}
       >
-        🎬 Movie Portal
+        🎬 MovieVerse
       </button>
 
         </Link>
@@ -113,9 +113,9 @@ const Navbar = () => {
           Log Out
         </button>
       ) : (
-        <div>
+        <div className='flex items-center'>
           <Link to={"/login"}>
-          <button className="btn btn-success text-white transition-transform transform hover:scale-105">
+          <button className="btn btn-success text-white transition-transform transform hover:scale-105 text-nowrap">
             Log In
           </button>
         </Link>

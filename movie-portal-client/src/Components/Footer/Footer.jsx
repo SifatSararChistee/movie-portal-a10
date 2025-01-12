@@ -9,7 +9,7 @@ const Footer = () => {
   <aside className='space-y-5'>
   <span className='text-5xl'> 🎬 </span>
     <p className="font-bold text-2xl">
-      Movie Portal
+      MovieVerse
       <br />
       <span className='text-lg'>Providing reliable Movies Information since 1992</span>
     </p>

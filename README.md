@@ -1,12 +1,12 @@
-# 🎥 Movie Portal
+# 🎥 MovieVerse
 
 [Live Website URL](https://eco-adventure-a0975.web.app)
 
-![movie portal Screenshot](https://i.ibb.co.com/gwH0qNv/movie-portal.png)
+![MovieVerse Screenshot](https://i.ibb.co.com/gwH0qNv/movie-portal.png)
 
 ## Project Theme
 
-Welcome to **Movie Portal**, your go-to platform for discovering, managing, and enjoying movies. Our portal simplifies exploring movie details, adding and deleting movies, and managing your favorites—all within a responsive and user-friendly interface.
+Welcome to **MovieVerse**, your go-to platform for discovering, managing, and enjoying movies. Our portal simplifies exploring movie details, adding and deleting movies, and managing your favorites—all within a responsive and user-friendly interface.
 
 ---
 
@@ -92,8 +92,8 @@ Follow these steps to run the project on your local machine:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/SifatSararChistee/service-review-system-a11.git
-   cd trustify
+   git clone https://github.com/SifatSararChistee/movie-portal-a10.git
+   cd movie-portal
    ```
 2. **Commands**:
    ```bash

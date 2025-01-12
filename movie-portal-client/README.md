@@ -1,10 +1,10 @@
-# 🎥 Movie Portal
+# 🎥 MovieVerse
 
 [Live Website URL](https://eco-adventure-a0975.web.app)
 
 ## Project Theme
 
-Welcome to **Movie Portal**, your go-to platform for discovering, managing, and enjoying movies. Our portal simplifies exploring movie details, adding and deleting movies, and managing your favorites—all within a responsive and user-friendly interface.
+Welcome to **MovieVerse**, your go-to platform for discovering, managing, and enjoying movies. Our portal simplifies exploring movie details, adding and deleting movies, and managing your favorites—all within a responsive and user-friendly interface.
 
 ---
 
